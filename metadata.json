@@ -1,0 +1,5 @@
+{
+  "name": "PulseCore",
+  "description": "A frontend application for Pulsecore, designed to monitor and manage industrial equipment. It features a dashboard, equipment control, automation, alerts, and reporting. It includes full administrative capabilities for managing sites, towers, equipment, and users with site-based access control, all running on mock data persisted to localStorage.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulsecore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#020617' },
+              sky: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Base styles */
+      :root {
+        --scrollbar-track-bg: #f1f5f9;
+        --scrollbar-thumb-bg: #94a3b8;
+        --scrollbar-thumb-hover-bg: #64748b;
+        --scrollbar-border-color: #f1f5f9;
+      }
+      html.dark {
+        --scrollbar-track-bg: #1e293b;
+        --scrollbar-thumb-bg: #475569;
+        --scrollbar-thumb-hover-bg: #64748b;
+        --scrollbar-border-color: #1e293b;
+      }
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background-color: var(--scrollbar-track-bg); }
+      ::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb-bg); border-radius: 10px; border: 2px solid var(--scrollbar-border-color); }
+      ::-webkit-scrollbar-thumb:hover { background-color: var(--scrollbar-thumb-hover-bg); }
+      body { font-family: 'Inter', sans-serif; }
+      
+      .vanta-canvas {
+        width: 100%;
+        height: 100%;
+      }
+      /* Custom toggle switch style */
+      input:checked ~ .dot {
+        transform: translateX(1.5rem);
+      }
+      .toggle-bg { transition: background-color 0.2s ease-in-out; }
+      input:checked + .toggle-bg {
+        background-color: #0ea5e9; /* sky-500 */
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.1.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+        "react/": "https://aistudiocdn.com/react@^19.1.1/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.542.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.1.2",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2",
+        "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.3.1",
+        "uuid": "https://aistudiocdn.com/uuid@^11.1.0",
+        "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+        "date-fns": "https://aistudiocdn.com/date-fns@^3.6.0",
+        "date-fns/": "https://aistudiocdn.com/date-fns@^3.6.0/"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body class="">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
